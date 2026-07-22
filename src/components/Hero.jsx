@@ -1,14 +1,15 @@
 export default function Hero() {
   return (
     <section className="relative w-full min-h-[100dvh] md:h-screen bg-vexxo-dark flex flex-col md:flex-row md:items-center overflow-hidden pt-24 md:pt-0">
-      {/* Background/Modelo */}
-      <div className="relative w-full h-[50vh] md:absolute md:inset-y-0 md:right-0 md:w-1/2 md:h-full flex justify-center md:justify-end items-center overflow-hidden md:overflow-visible">
-        {/* Ponto de luz / Glow */}
-        <div
-          className="absolute right-1/2 translate-x-1/2 md:translate-x-0 md:right-[10%] top-[45%] -translate-y-1/2 w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full blur-[100px] md:blur-[150px] opacity-50 z-0 pointer-events-none"
-          style={{ backgroundColor: '#e39c84' }}
-        ></div>
+      
+      {/* Ponto de luz / Glow Global */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-[10%] top-[30vh] md:top-[45%] -translate-y-1/2 w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full blur-[100px] md:blur-[150px] opacity-50 z-0 pointer-events-none"
+        style={{ backgroundColor: '#e39c84' }}
+      ></div>
 
+      {/* Background/Modelo */}
+      <div className="relative w-full h-[50vh] z-10 md:absolute md:inset-y-0 md:right-0 md:w-1/2 md:h-full flex justify-center md:justify-end items-center overflow-hidden md:overflow-visible">
         <img
           src="/modelo-hero.png"
           alt="Modelo Vexxo"
