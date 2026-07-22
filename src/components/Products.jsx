@@ -15,7 +15,7 @@ export default function Products() {
                 <img 
                   src={item.img} 
                   alt={`Óculos ${item.name}`} 
-                  className="max-h-full object-contain drop-shadow-xl"
+                  className="max-h-full object-contain drop-shadow-none md:drop-shadow-xl"
                   onError={(e) => { e.target.style.display = 'none'; }}
                 />
               </div>

@@ -1,10 +1,33 @@
+import { useState, useEffect } from 'react';
+
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="absolute top-0 w-full z-50 flex justify-between items-center px-8 py-6 md:px-16 md:py-8">
+    <nav 
+      className={`fixed top-0 w-full z-50 flex justify-between items-center px-8 md:px-16 transition-all duration-500 ${
+        isScrolled 
+          ? 'py-3 md:py-4 bg-black/60 backdrop-blur-md border-b border-white/10' 
+          : 'py-6 md:py-8 bg-transparent border-b border-transparent'
+      }`}
+    >
       <div className="flex items-center">
-        <h1 className="text-3xl font-serif tracking-widest text-white">
-          vexxo<span className="text-[0.4em] block uppercase tracking-[0.4em] font-sans -mt-1 ml-1 text-gray-400">Optica</span>
-        </h1>
+        <a href="/">
+          <img 
+            src="/vexxo-logo.png" 
+            alt="Vexxo Óptica" 
+            className={`w-auto object-contain transition-all duration-500 ${isScrolled ? 'h-8 md:h-10' : 'h-10 md:h-12'}`} 
+          />
+        </a>
       </div>
       <a href="#contact" className="text-white hover:text-vexxo-lightbrown transition-colors duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

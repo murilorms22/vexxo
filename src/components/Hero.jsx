@@ -1,22 +1,32 @@
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen bg-vexxo-dark flex items-center overflow-hidden">
+    <section className="relative w-full min-h-[100dvh] md:h-screen bg-vexxo-dark flex flex-col md:flex-row md:items-center overflow-hidden pt-24 md:pt-0">
       {/* Background/Modelo */}
-      <div className="absolute inset-y-0 right-0 w-full md:w-1/2 flex justify-end">
+      <div className="relative w-full h-[50vh] md:absolute md:inset-y-0 md:right-0 md:w-1/2 md:h-full flex justify-center md:justify-end items-center overflow-hidden md:overflow-visible">
+        {/* Ponto de luz / Glow */}
+        <div
+          className="absolute right-1/2 translate-x-1/2 md:translate-x-0 md:right-[10%] top-[45%] -translate-y-1/2 w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full blur-[100px] md:blur-[150px] opacity-50 z-0 pointer-events-none"
+          style={{ backgroundColor: '#e39c84' }}
+        ></div>
+
         <img
           src="/modelo-hero.png"
           alt="Modelo Vexxo"
-          className="h-[115%] w-[80%] md:w-full object-cover object-right"
+          className="h-[110%] md:h-[120%] w-full md:w-[100%] object-cover object-top md:object-right relative z-10 md:translate-y-24"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
+
+        {/* Degradê na parte de baixo da imagem apenas no mobile */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-vexxo-dark to-transparent z-20 md:hidden pointer-events-none"></div>
       </div>
 
-      <div className="relative z-20 container mx-auto px-8 md:px-16 mt-20 md:mt-0">
-        <div className="max-w-2xl">
+      {/* Container do Texto */}
+      <div className="relative z-20 w-full container mx-auto px-8 md:px-16 py-8 md:py-0 flex-1 flex flex-col justify-center">
+        <div className="max-w-2xl text-center md:text-left mx-auto md:mx-0 flex flex-col items-center md:items-start">
           <h2 className="text-4xl md:text-6xl lg:text-6xl font-serif text-white leading-tight mb-6">
             Acetato puro italiano,<br className="hidden md:block" /> feito à mão no Brasil.
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-sans font-light leading-relaxed mb-10 max-w-lg">
+          <p className="text-base md:text-xl text-gray-400 font-sans font-light leading-relaxed mb-8 md:mb-10 max-w-lg">
             Mais que um acessório, uma extensão da sua personalidade. Durabilidade eterna e estética atemporal.
           </p>
 
