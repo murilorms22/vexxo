@@ -6,7 +6,7 @@ export default function Hero() {
         <img
           src="/modelo-hero.png"
           alt="Modelo Vexxo"
-          className="h-full w-[80%] md:w-full object-cover object-right"
+          className="h-[115%] w-[80%] md:w-full object-cover object-right"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
       </div>
