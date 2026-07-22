@@ -13,12 +13,12 @@ export default function Hero() {
         <img
           src="/modelo-hero.png"
           alt="Modelo Vexxo"
-          className="h-[110%] md:h-[120%] w-full md:w-[100%] object-cover object-top md:object-right relative z-10 md:translate-y-24"
+          className="h-[110%] md:h-[120%] w-full md:w-[100%] object-cover object-top md:object-right md:relative md:z-10 md:translate-y-24"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
 
         {/* Degradê na parte de baixo da imagem apenas no mobile */}
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-vexxo-dark to-transparent z-20 md:hidden pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-vexxo-dark via-vexxo-dark/90 to-transparent z-30 md:hidden pointer-events-none"></div>
       </div>
 
       {/* Container do Texto */}
