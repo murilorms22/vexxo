@@ -19,7 +19,7 @@ export default function Craftsmanship() {
             Brasileira, feita à mão e com todo o cuidado.
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-sans font-light leading-relaxed max-w-lg mx-auto md:mx-0 pb-12">
-            Nossa qualidade vem do acetato puro Mazzucchelli, nosso estilo vem do design único e exclusivo que só o acetato italiano tem...
+            Nossa qualidade vem do acetato puro Mazzucchelli, nosso estilo vem do design único e exclusivo que só o acetato italiano tem.
           </p>
         </div>
 

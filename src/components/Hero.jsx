@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[100dvh] md:h-screen bg-vexxo-dark flex flex-col md:flex-row md:items-center overflow-hidden pt-24 md:pt-0">
+    <section className="relative w-full min-h-[100dvh] md:h-screen bg-vexxo-dark flex flex-col md:flex-row md:items-center overflow-hidden pt-20 md:pt-0">
 
       {/* Ponto de luz / Glow Global */}
       <div
@@ -9,11 +9,11 @@ export default function Hero() {
       ></div>
 
       {/* Background/Modelo */}
-      <div className="relative w-full h-[50vh] z-10 md:absolute md:inset-y-0 md:right-0 md:w-1/2 md:h-full flex justify-center md:justify-end items-center overflow-hidden md:overflow-visible">
+      <div className="relative w-full h-[55vh] md:h-[50vh] z-10 md:absolute md:inset-y-0 md:right-0 md:w-1/2 flex justify-center md:justify-end items-start md:items-center overflow-hidden md:overflow-visible">
         <img
           src="/modelo-hero.png"
           alt="Modelo Vexxo"
-          className="h-[110%] md:h-[120%] w-full md:w-[100%] object-cover object-top md:object-right md:relative md:z-10 md:translate-y-24"
+          className="h-[100%] md:h-[120%] w-[100%] md:w-[100%] object-contain md:object-cover object-top md:object-right md:relative md:z-10 md:translate-y-24 -mt-4 md:mt-0"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
 
