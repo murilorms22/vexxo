@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section 
+    <section
       className="relative w-full bg-vexxo-dark flex flex-col md:flex-row md:items-center overflow-hidden pt-20 md:pt-0"
       style={{ minHeight: 'calc(100dvh / var(--zoom-factor, 1))' }}
     >
@@ -27,7 +27,7 @@ export default function Hero() {
 
       {/* Container do Texto */}
       <div className="relative z-20 w-full flex-1 flex flex-col justify-start md:justify-center bg-vexxo-dark md:bg-transparent">
-        <div className="w-full px-8 md:pl-[10%] lg:pl-[12%] xl:pl-[15%] pt-0 pb-12 md:py-0 flex flex-col justify-start md:justify-center">
+        <div className="w-full px-8 md:pl-[10%] lg:pl-[12%] xl:pl-[15%] pt-0 pb-12 md:py-0 flex flex-col justify-start md:justify-center -mt-12 md:mt-0 relative z-40">
           <div className="max-w-2xl text-center md:text-left mx-auto md:mx-0 flex flex-col items-center md:items-start">
             <h2 className="text-4xl md:text-6xl lg:text-6xl font-serif text-white leading-tight mb-6">
               Acetato puro italiano,<br className="hidden md:block" /> feito à mão no Brasil.
@@ -44,12 +44,14 @@ export default function Hero() {
       </div>
 
       {/* Indicador de Scroll */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center animate-bounce">
-        <a href="#produtos" className="text-white/60 hover:text-white transition-colors" aria-label="Rolar para baixo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </a>
+      <div className="absolute bottom-6 md:bottom-6 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center">
+        <div className="animate-bounce">
+          <a href="#produtos" className="text-white/60 hover:text-white transition-colors block" aria-label="Rolar para baixo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
