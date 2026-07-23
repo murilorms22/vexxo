@@ -1,30 +1,29 @@
 export default function Customization() {
   return (
-    <section className="w-full bg-vexxo-offwhite py-24 px-8 md:px-16">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-16">
-        
-        <div className="w-full md:w-1/2 flex flex-col justify-center">
+    <section className="w-full bg-vexxo-offwhite pt-24 pb-0 px-8 md:px-16 relative z-20">
+      <div className="container mx-auto flex flex-col md:flex-row items-stretch gap-8 md:gap-16">
+
+        <div className="w-full md:w-1/2 flex flex-col justify-center pb-0 md:pb-24 text-center md:text-left items-center md:items-start">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-vexxo-dark leading-tight mb-8">
             Design exclusivo, personalizável, que combine com seu rosto.
           </h2>
           <p className="text-lg md:text-xl text-gray-700 font-sans font-light leading-relaxed mb-10 max-w-lg">
             Acreditamos que cada pessoa é única. Por isso, oferecemos a possibilidade de ajustar cada detalhe. O encaixe perfeito é aquele feito pensado exclusivamente para você.
           </p>
-          <div>
-            <a href="#contact" className="inline-block border-b border-vexxo-dark text-vexxo-dark pb-1 text-sm tracking-[0.2em] uppercase hover:text-vexxo-brown hover:border-vexxo-brown transition-colors duration-300">
+          <div className="w-full flex justify-center md:justify-start mt-4">
+            <a href="#contact" className="inline-block px-8 py-4 bg-transparent border border-vexxo-dark text-vexxo-dark font-sans text-sm tracking-widest uppercase hover:bg-vexxo-dark hover:text-white transition-all duration-500 ease-in-out">
               Personalize seu VEXXO®️
             </a>
           </div>
         </div>
 
-        <div className="w-full md:w-1/2">
-          <div className="aspect-[4/5] md:aspect-square overflow-hidden bg-gray-200">
-            <img 
-              src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" 
-              alt="Design Exclusivo Vexxo" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-            />
-          </div>
+        <div className="w-full md:w-1/2 relative flex items-end justify-center">
+          <img
+            src="/modelo-customizado.png"
+            alt="Design Exclusivo Vexxo"
+            className="w-full md:w-auto md:max-w-[140%] max-h-[70vh] md:max-h-none md:h-[140%] md:absolute md:bottom-0 md:-right-16 lg:-right-16 object-contain object-bottom transition-all duration-700 z-30 pointer-events-none"
+            onError={(e) => { e.target.style.display = 'none'; }}
+          />
         </div>
 
       </div>

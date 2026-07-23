@@ -12,10 +12,21 @@ export default function LensExpertise() {
           Nossa curadoria óptica trabalha apenas com o que há de mais tecnológico e preciso no mercado global. Somos parceiros e especialistas em lentes Essilor/Varilux e Hoyalux.
         </p>
         
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-          <span className="text-2xl font-serif tracking-wider font-bold">VARILUX</span>
-          <span className="text-2xl font-serif tracking-wider font-bold">ESSILOR</span>
-          <span className="text-2xl font-sans tracking-widest font-semibold">HOYALUX</span>
+        <div className="w-full max-w-3xl overflow-hidden rounded-3xl shadow-2xl mb-16">
+          <img 
+            src="/oculos-studio.png" 
+            alt="Óculos Vexxo Studio" 
+            className="w-full h-auto object-cover"
+            onError={(e) => { e.target.style.display = 'none'; }}
+          />
+        </div>
+
+        <div className="flex flex-row items-center justify-center gap-6 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+          <img src="/variluxlogo.webp" alt="Varilux" className="h-5 md:h-8 object-contain" />
+          <div className="w-[1px] h-8 md:h-12 bg-white/20"></div>
+          <img src="/essilor-logo.webp" alt="Essilor" className="h-5 md:h-8 object-contain" />
+          <div className="w-[1px] h-8 md:h-12 bg-white/20"></div>
+          <img src="/hoya-logo.webp" alt="Hoya" className="h-5 md:h-8 object-contain" />
         </div>
       </div>
     </section>

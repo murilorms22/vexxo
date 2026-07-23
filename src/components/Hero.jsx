@@ -9,16 +9,17 @@ export default function Hero() {
       ></div>
 
       {/* Background/Modelo */}
-      <div className="relative w-full h-[55vh] md:h-[50vh] z-10 md:absolute md:inset-y-0 md:right-0 md:w-1/2 flex justify-center md:justify-end items-start md:items-center overflow-hidden md:overflow-visible">
+      <div className="relative w-full h-[55vh] md:h-full z-10 md:absolute md:inset-y-0 md:right-0 md:w-1/2 flex justify-center md:justify-end items-start md:items-end overflow-hidden md:overflow-visible">
         <img
           src="/modelo-hero.png"
           alt="Modelo Vexxo"
-          className="h-[100%] md:h-[120%] w-[100%] md:w-[100%] object-contain md:object-cover object-top md:object-right md:relative md:z-10 md:translate-y-24 -mt-4 md:mt-0"
+          className="h-[100%] w-[100%] md:h-[95%] md:w-[95%] object-contain object-top md:object-contain md:object-right-bottom md:relative md:z-10 -mt-4 md:mt-0"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
 
-        {/* Degradê na parte de baixo da imagem apenas no mobile */}
+        {/* Degradê na parte de baixo da imagem (Mobile = Forte, Desktop = Suave) */}
         <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-vexxo-dark via-vexxo-dark/90 to-transparent z-30 md:hidden pointer-events-none"></div>
+        <div className="hidden md:block absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-vexxo-dark/90 via-vexxo-dark/70 to-transparent z-30 pointer-events-none"></div>
       </div>
 
       {/* Container do Texto */}
@@ -37,6 +38,15 @@ export default function Hero() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Indicador de Scroll */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center animate-bounce">
+        <a href="#produtos" className="text-white/60 hover:text-white transition-colors" aria-label="Rolar para baixo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
       </div>
     </section>
   );
