@@ -1,19 +1,19 @@
 export default function Timeless() {
   return (
     <section className="w-full bg-vexxo-offwhite flex flex-col md:flex-row items-stretch md:min-h-[75vh]">
-        
+
       {/* Título no Mobile (Aparece antes da imagem) */}
-      <div className="w-full px-8 pt-24 pb-8 md:hidden">
+      <div className="w-full px-8 pt-24 pb-16 md:hidden text-center">
         <h2 className="text-4xl font-serif text-vexxo-dark leading-tight">
-          Estética atemporal que atravessa gerações.
+          Estética <span className="italic text-vexxo-brown">atemporal</span> que atravessa <span className="italic text-vexxo-brown">gerações</span>.
         </h2>
       </div>
 
       <div className="w-full md:w-1/2 relative aspect-[4/3] md:aspect-auto">
         <div className="w-full h-full absolute inset-0 overflow-hidden">
-          <img 
-            src="/oculos-variados.png" 
-            alt="Estética Atemporal Vexxo" 
+          <img
+            src="/oculos-variados.png"
+            alt="Estética Atemporal Vexxo"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
             onError={(e) => { e.target.style.display = 'none'; }}
           />

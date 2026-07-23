@@ -37,7 +37,7 @@ export default function Contact() {
             </div>
             <div>
               <p className="text-white font-sans text-sm font-medium">Loja 2</p>
-              <p className="text-gray-400 font-sans text-sm">Shopping Pelotas - Quiosque 19<br/>Pelotas, Brazil 96015-730</p>
+              <p className="text-gray-400 font-sans text-sm">Shopping Pelotas - Quiosque 19<br/>Pelotas, Brazil 96085-000</p>
             </div>
           </div>
 
