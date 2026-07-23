@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[100dvh] md:h-screen bg-vexxo-dark flex flex-col md:flex-row md:items-center overflow-hidden pt-20 md:pt-0">
+    <section 
+      className="relative w-full bg-vexxo-dark flex flex-col md:flex-row md:items-center overflow-hidden pt-20 md:pt-0"
+      style={{ minHeight: 'calc(100dvh / var(--zoom-factor, 1))' }}
+    >
 
       {/* Ponto de luz / Glow Global */}
       <div
@@ -13,7 +16,7 @@ export default function Hero() {
         <img
           src="/modelo-hero.png"
           alt="Modelo Vexxo"
-          className="h-[100%] w-[100%] md:h-[95%] md:w-[95%] object-contain object-top md:object-contain md:object-right-bottom md:relative md:z-10 -mt-4 md:mt-0"
+          className="h-[100%] w-[100%] md:h-[95%] md:w-[95%] object-contain object-top md:right-32 md:object-contain md:object-right-bottom md:relative md:z-10 -mt-4 md:mt-0"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
 
@@ -24,7 +27,7 @@ export default function Hero() {
 
       {/* Container do Texto */}
       <div className="relative z-20 w-full flex-1 flex flex-col justify-start md:justify-center bg-vexxo-dark md:bg-transparent">
-        <div className="container mx-auto px-8 md:px-16 pt-0 pb-12 md:py-0 flex flex-col justify-start md:justify-center">
+        <div className="w-full px-8 md:pl-[10%] lg:pl-[12%] xl:pl-[15%] pt-0 pb-12 md:py-0 flex flex-col justify-start md:justify-center">
           <div className="max-w-2xl text-center md:text-left mx-auto md:mx-0 flex flex-col items-center md:items-start">
             <h2 className="text-4xl md:text-6xl lg:text-6xl font-serif text-white leading-tight mb-6">
               Acetato puro italiano,<br className="hidden md:block" /> feito à mão no Brasil.

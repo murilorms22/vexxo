@@ -5,6 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '1024px',
+      'lg': '1280px',
+      'xl': '1536px',
+      '2xl': '1920px',
+    },
+
     extend: {
       colors: {
         'vexxo-dark': '#0f0f0f',
